@@ -1,0 +1,82 @@
+### AUTH-api
+
+POST http://0.0.0.0:8081/v1/auth/sign-up
+Content-Type: application/json
+
+{
+  "firstName": "Olzhas",
+  "lastName": "Bazarbekov",
+  "login":    "olzhas",
+  "password": "olzhas"
+}
+
+###
+
+POST http://0.0.0.0:8081/v1/auth/sign-in
+Content-Type: application/json
+
+{
+  "login":    "olzhas",
+  "password": "olzhas"
+}
+
+###
+
+POST http://0.0.0.0:8081/v1/auth/sign-out
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDIxNzQxMTQsImlhdCI6MTcwMjEzODExNCwiaWQiOjIsInVzZXJUeXBlIjoiVVNFUiJ9.qQanuUtxCs3pu7AVOSjIozji-FYxO8wfKb3ZI47whxg
+
+{}
+
+###
+POST http://0.0.0.0:8081/v1/auth/refresh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDIxNjE1MzMsImlhdCI6MTcwMjEyNTUzMywiaWQiOjEsInVzZXJUeXBlIjoiIn0.KZIW7UdJ0LU2vQfz6FOJff6H2ei8sz7MkH1gVIrdxuE
+
+{}
+
+###
+POST http://0.0.0.0:8081/v1/auth/check
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDI2OTU2NTUsImlhdCI6MTcwMjY1OTY1NSwiaWQiOjMsInVzZXJUeXBlIjoiVVNFUiIsInVzZXJuYW1lIjoiT2x6aGFzIEJhemFyYmVrb3YifQ.hjLcNQ45GsD2W3tqivwdzCFNRhzCzWItHBr5_AfQp8E
+
+{}
+
+
+
+######################################## SOCIAL-MEDIA
+
+### POSTS
+
+GET http://0.0.0.0:8080/api/v1/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDI2OTYwNjQsImlhdCI6MTcwMjY2MDA2NCwiaWQiOjMsInVzZXJUeXBlIjoiVVNFUiIsInVzZXJuYW1lIjoiT2x6aGFzIEJhemFyYmVrb3YifQ.tiGF50suTYnu6WGGuDw5WIWIissnxm9zL46jpghsiZU
+
+{}
+
+###
+
+GET http://0.0.0.0:8080/api/v1/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDIyMzk2NTIsImlhdCI6MTcwMjIwMzY1MiwiaWQiOjIsInVzZXJUeXBlIjoiVVNFUiJ9.xggvH6UeAb2qTDAqoIC4xncqrg_mJfcJveup_el6gpQ
+
+{}
+
+###
+
+POST http://0.0.0.0:8080/api/v1/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDI2OTYwNjQsImlhdCI6MTcwMjY2MDA2NCwiaWQiOjMsInVzZXJUeXBlIjoiVVNFUiIsInVzZXJuYW1lIjoiT2x6aGFzIEJhemFyYmVrb3YifQ.tiGF50suTYnu6WGGuDw5WIWIissnxm9zL46jpghsiZU
+
+{
+  "title": "hello guys",
+  "text": "here can be your advertise",
+  "image": "https://xiaomi.jpg"
+}
+
+
+###
+
+DELETE http://0.0.0.0:8080/api/v1/posts/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDIyMzk0MjksImlhdCI6MTcwMjIwMzQyOSwiaWQiOjEsInVzZXJUeXBlIjoiQURNSU4ifQ.0mFr_q0sv39MJwmAvXitE620Sfo2xQammylwAmH0MKA
